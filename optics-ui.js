@@ -7,8 +7,8 @@ const OpticsModels={
  motion:(v,t,s,fps,h)=>({mm:v*t/1000,pixels:v*t/1000/s,maxTime:s/v*1000,travel:v/fps,overlap:Math.max(0,1-v/fps/h)*100}),
  signal:(rate,t,gain)=>{const electrons=rate*t,well=10000,code=4095,unclipped=Math.min(electrons,well)/well*code*gain;return {electrons,dn:Math.min(code,Math.round(unclipped)),saturated:electrons>=well||unclipped>=code};}
 };
-function opticsExperiment(kind){
- const el=document.querySelector('#experiment'),fmt=(n,d=2)=>n.toLocaleString('de-DE',{maximumFractionDigits:d});
+function opticsExperiment(kind,target='#experiment'){
+ const el=document.querySelector(target),fmt=(n,d=2)=>n.toLocaleString('de-DE',{maximumFractionDigits:d});
  const range=(id,label,min,max,value,unit,step=1)=>`<label for="${id}">${label}: <output id="${id}-value">${fmt(value)} ${unit}</output></label><input type="range" id="${id}" min="${min}" max="${max}" value="${value}" step="${step}">`;
  const values=items=>items.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join('');
  const bind=(ids,update)=>{ids.forEach(id=>document.querySelector('#'+id).oninput=update);update()};

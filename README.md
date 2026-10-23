@@ -80,3 +80,55 @@ Die zweite Lernwelt enthält sieben vollständig ausgearbeitete Module: Bildfeld
 Die Simulationen nennen jeweils ihre Modellannahmen. Gegenstandsweite ist nicht pauschal Arbeitsabstand; geometrische Abtastung ist keine Erkennungsgarantie. Objektivkandidaten und der Abschlussfall sind fiktiv und keine Cubert-Produktfreigabe. Redaktionelle Fachprüfung steht offen. Die Inhalte von Licht & Physik bleiben unverändert.
 
 Die Academy enthält jetzt 20 verfügbare Module: 14 ausführliche Grundlagenmodule mit zusammen 84 Fragen sowie sechs ältere Pilotmodule. Weitere Lernwelten sind weiterhin vorbereitet. Automatische Tests prüfen Bestandsmigration, Bestehensgrenzen, Freischaltungen, Belohnungen und die Rechenmodelle. Die Tests laufen im Repository und im entpackten Quellcode-ZIP mit `node tools/test-engine.cjs`.
+
+
+## Version 2.4 — Messpraxis & Beleuchtung
+
+Acht ausführliche Module führen durch Weißreferenz, Dunkelreferenz/Kalibrierung, Rauschen, Lichtquellen, Laboraufbau, Außenmessungen, Qualitätsnachweis und einen Diagnosefall. Je Modul: fünf Lernabschnitte, interaktive Übung, Transferfrage mit Musterantwort und sechs Quizfragen. Richtwert: 10–15 Minuten plus Quiz. Die Grundlagen werden angewendet; Licht & Physik und Kamera & Optik bleiben unverändert.
+
+`measurement.js` enthält die Inhalte; `measurement-ui.js` enthält acht Übungen mit ausdrücklich vereinfachten oder fiktiven Daten. Rechenmodelle behandeln Referenzgültigkeit, unabhängiges Rauschen gegenüber gemeinsamer Drift, wechselnde Beleuchtung sowie Mittelwert und Stichprobenstreuung. Sie ersetzen keine Gerätekalibrierung oder reale Qualitätsfreigabe. Redaktionelle Fachprüfung steht offen.
+
+Die drei früheren Kurzmodule `reference`, `noise` und `illumination` verwenden jetzt Inhaltsversion 2. Bereits verdiente Sterne bleiben erhalten; der neue Abschluss benötigt die aktuellen Quiz. Die acht Quiz werden nacheinander freigeschaltet (5/6 bestanden, 6/6 drei Sterne). Alle Inhalte bleiben lesbar. Der vollständige Lernweltabschluss schaltet die bestehende Weltbelohnung frei. Praktische Kundenfreigaben bleiben getrennt.
+
+Jetzt verfügbar: 25 Module, davon 22 ausführliche Module in drei fertigen Lernwelten mit 132 Fragen, plus drei ältere Pilotmodule. Fortschritt bleibt im Browser; JSON-Export/Import bleiben verfügbar. `node tools/test-engine.cjs` prüft die bestehenden Funktionen sowie die neue Migration, Freischaltungen und numerischen Modelle. Das Kommando funktioniert ebenfalls im entpackten Download-ZIP.
+
+
+## Version 2.5 — Kerntechnologie und visuelles Lernen
+
+Die vierte Lernwelt enthält acht ausführliche Module mit insgesamt 48 Fragen: Aufnahmeprinzipien, Lichtfeld/Rekonstruktion, Sensoren, Filter, Parallaxe, Information/Auflösung, Schnittstellen und ein Beratungsfall. Je Modul fünf Textabschnitte, eine bedienbare Grafik beziehungsweise visuelle Fallauswahl, Transferfrage und sechs Quizfragen. Zeitbudget etwa 10–15 Minuten einschließlich Erkundung, zuzüglich Quiz. Quellen: Cubert Knowledge Base und Cubert-Technologieartikel sowie EMVA, Hamamatsu und Edmund Optics; geprüft am 23.10.2026. Fachliche Freigabe bleibt offen.
+
+Die Grafik steht bei jedem neuen Modul direkt in einem passenden Lernabschnitt und erneut auf der Übungsseite. Auch die vorhandenen Experimente der ersten drei Lernwelten sind jetzt im Textfluss erreichbar. Der Wellenlängenselektor zeigt zusätzlich eine räumliche Welle, einen zeitlichen Verlauf auf festen Achsen und einen separaten Balken für die Energie pro Photon. Gleiche Feldamplitude bedeutet dabei nicht gleiche Photonenenergie; Infrarot wird neutral dargestellt.
+
+`core.js` enthält die Lektionen, `core-ui.js` die schematischen SVG-Grafiken und Rechenmodelle. Die Modelle sind ausdrücklich keine Produktdaten: Zweiansichten-Parallaxe, vereinfachte Filterwinkelverschiebung, Gaußfaltung zweier Peaks, mittlere Photonenumwandlung und ein hypothetischer fertiger Würfelstrom. Die reale ULTRIS-Rekonstruktion und die tatsächlich übertragene Rohdatenmenge werden nicht simuliert. Konkrete GigE-Vision/USB3-Vision-Konformität ist pro Produkt zu prüfen.
+
+Bestehende Inhaltsversionen und Spielstände bleiben unverändert. Die neuen Quiz verwenden 5/6 als Bestehensgrenze und 6/6 für drei Sterne; der gesamte Kerntechnologiekurs schaltet seine vorgesehene Ausrüstung frei. Keine automatische Praxisfreigabe. Insgesamt: 33 verfügbare Module, davon 30 ausführliche in vier Lernwelten mit 180 Fragen, zusätzlich drei ältere Pilotmodule (9 Fragen). Browserlokale Speicherung und JSON-Import/Export bleiben erhalten.
+
+Prüfen: `node tools/test-engine.cjs` im Repository oder im entpackten ZIP. Die Prüfung deckt die bisherige Migration, Erhalt der drei abgeschlossenen Welten beim Update, Freischaltungen und numerische Grenzfälle der neuen Modelle ab.
+
+## Version 2.6 — Cubert · Kameraprodukte
+
+Acht vollständige Module mit fünf Leseabschnitten, visueller Übung, Transferaufgabe und je sechs Quizfragen. Themen: Portfolio, VIS/NIR, SWIR, Datenblattinterpretation, Konfiguration, Auswahl, Demo und Lebenszyklus. Neun Produkt-/Variantenkarten tragen Quellen und Stand 23.10.2026. Wellenlängenkarte, native/fusionierte Pixel, Belichtungsbudget, Zuordnungskarten, Konfigurationskette, Kriterienmatrix, Demoplan und Supportfälle sind interaktiv.
+
+Die Auswahl trennt Kandidaten, Ausschlüsse und Klärungsfälle. Die SWIR1-Quellenabweichung bei Bereich und Bildrate bleibt sichtbar; SWIR-1G ist eine eigene Variante. X20-Plus-Fusion zählt nicht als native Spektralpixel. Quellen sind Momentaufnahmen; konkrete Konfigurationen und fachliche Freigabe sind zu bestätigen. Quizsterne erzeugen keine Praxisfreigabe.
+
+Jetzt fünf ausgearbeitete Lernwelten mit 38 vollständigen Modulen / 228 Fragen; einschließlich dreier älterer Piloten 41 spielbare Module und 237 Fragen. Bestehende Spielstände und Modulrevisionen bleiben erhalten. Prüfung: `node tools/test-engine.cjs` (aus Projekt- oder ZIP-Wurzel).
+
+## Version 2.7 — Vertrieb & Kommunikation
+
+Alle zwölf vorgesehenen Module sind ausgearbeitet: Gesprächsführung, Bedarf, Rollen und Entscheider (einschließlich Endkunde/OEM/Integrator), Qualifizierung, Abschluss/Übergabe, Präsentation, Demo/POC, Messe, Konferenz, Einwände, Nutzen/Wirtschaftlichkeit und Angebot/Verhandlung. Je fünf Leseabschnitte mit etwa 600 Wörtern, eine interaktive Übung, eine Transferaufgabe mit Musterantwort und sechs Quizfragen ergeben 72 neue Fragen.
+
+Grafische Übungen: Zeitplan, Fragenleiter, Entscheiderkarte, Qualifizierungsübersicht, strukturierte Gesprächsnotiz, Folienordnung, POC-Plan, drei Gesprächsszenarien, Wirtschaftlichkeitsrechner und Angebotsumfang. Übungseingaben gelten nur in der aktuellen Ansicht; keine Nachrichten, CRM-Übertragungen oder dauerhafte Kundendatenspeicherung. Der Rechner nutzt ausschließlich fiktive Annahmen und eine einfache, nicht abgezinste Amortisation.
+
+Die vorhandenen verzweigten Voraussetzungen bleiben bestehen. Die sechs Vertriebsbausteine für „Eigenständiges Erst- und Bedarfsgespräch“ sind jetzt verfügbar; zusammen mit den technischen Voraussetzungen wird dessen Theorie erreichbar. Präsentations- und Eventmodule sind dafür keine zusätzliche Pflicht. Praxisfreigaben erfordern weiterhin eine Trainerbestätigung und werden niemals durch Quizsterne oder persönliche Häkchen erteilt. Inhalte bleiben „Fachprüfung offen“; Trainingsfälle ersetzen keine internen Befugnisse, Preislisten oder Vertragsprozesse.
+
+Gesamtstand: sechs ausgearbeitete Lernwelten, 50 vollständige Module mit 300 Fragen; einschließlich dreier älterer Piloten 53 spielbare Module, 309 Fragen und maximal 159 Sterne. Stabile IDs, bestehende Revisionen und Spielstände bleiben erhalten. Prüfungen: `node tools/test-engine.cjs`, JavaScript-Syntaxprüfung sowie Browserprüfung der neuen Übungen und Grenzen.
+
+## Version 2.8 — Vertrieb · Wissenschaft und Vertrieb · Industrial Imaging
+
+Nacheinander ausgebaut: Wissenschaft mit sechs Modulen / 36 Fragen, danach Industrial Imaging mit acht Modulen / 48 Fragen. Alle 14 Module enthalten fünf Lernabschnitte von etwa 600 Wörtern, eine grafische/interaktive Übung, Transferaufgabe, Musterantwort und sechs Quizfragen. Die bisherigen kurzen Piloten `research` und `industry` wurden ersetzt und auf Revision 2 angehoben. Ihre historischen Sterne bleiben erhalten; der neue Abschluss erfordert das aktuelle Quiz. Alle übrigen Modulrevisionen und geplanten Kursinhalte bleiben unverändert.
+
+Wissenschaft: Erkenntnisziel und Forschungsphase, Referenzzuordnung, Streuung/Offset, Datenzustand und Metadaten, Finanzierungs-/Beschaffungsplan, unabhängige Pflanzen als Prüfgruppen und abschließendes Forschungsgespräch. Industrial: projektspezifische Rollen, Fehler-/Probenmatrix, Abdeckung/Unschärfe/gesamtes Zeitbudget, Entscheidungsmatrix mit klaren Nennern und fiktiven Fehlerkosten, OEM-Mengenreife, Integrationsverantwortung, Chargentrennung, Pilotgrenzen und Industriegespräch. Alle Fälle und Rechenwerte sind fiktiv; keine neuen Produkt-, Förder-, Liefer- oder Serienzusagen.
+
+Praktische Aufgaben für Wissenschaftsberatung und Projektqualifizierung sind ergänzt; bestehende Voraussetzungen und Checklisten bleiben kompatibel. Eine Trainerbestätigung bleibt getrennt von Theorie, Übungshäkchen und Quizsternen. Die übrigen Lernwelten warten weiterhin auf zusätzliche fachliche Informationen.
+
+Gesamtstand: acht ausgearbeitete Lernwelten, 64 vollständige Module / 384 Fragen sowie der ältere Software-Pilot: 65 spielbare Module, 387 Fragen und maximal 195 Sterne. Prüfung: `node tools/test-engine.cjs` plus Syntax- und Browserprüfung. Modelle berücksichtigen leere/ungültige Eingaben, fehlende Nenner, negative Zeitreserven und getrennte Bestellstatus. Browserinteraktionen bleiben lokal; keine externen Dienste, Nachrichten oder Kundendatenübertragung.
